@@ -1,0 +1,171 @@
+---
+edit_uri: edit/main/docs-pt/
+
+site_url: https://dev-pods.github.io/devsecops-fundamentals
+site_name: GitHub DevSecOps Fundamentos
+site_author: Igwe Kalu <igwejk@github.com>
+site_description: GitHub DevSecOps Fundamentos | Workshop
+
+remote_name: origin
+remote_branch: gh-pages
+
+repo_url: https://github.com/dev-pods/devsecops-fundamentals/
+repo_name: Repositório GitHub
+
+theme:
+  name: material
+
+  custom_dir: theme.override/
+
+  icon:
+    logo: simple/githubactions
+    # edit: material/pencil.
+    # view: material/eye
+
+  favicon: assets/img/favicon.ico
+
+  language: pt
+
+  palette:
+    # Palette toggle for automatic mode
+    - toggle:
+        icon: material/brightness-auto
+        name: Mudar para modo escuro
+      media: "(prefers-color-scheme)"
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para preferência do sistema
+      media: "(prefers-color-scheme: light)"
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+      media: "(prefers-color-scheme: dark)"
+
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+
+plugins:
+  - search:
+      lang: pt
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+
+  - codehilite:
+      linenums: true
+      guess_lang: false
+
+  - toc:
+      permalink: true
+      separator: "-"
+
+  - def_list
+  - footnotes
+  - meta
+
+  - pymdownx.betterem:
+      smart_enable: all
+
+  - pymdownx.caret
+
+  - pymdownx.critic:
+      mode: view
+
+  - pymdownx.details
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+
+  - pymdownx.snippets:
+      check_paths: true
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+
+  - pymdownx.tilde
+
+extra:
+  # Enable footer
+  generator: true
+copyright: >-
+  Copyright &copy; 2023
+  <a href="https://github.com/services" target="_blank" style="font-weight: bold;">
+    GitHub Expert Services
+  </a>
+
+extra_javascript:
+  - assets/javascripts/extra.js
+  # KATEX
+  - assets/javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  # Sortable table
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascripts/tables.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - assets/stylesheets/extra.css
+
+nav:
+  - Início: index.md
+  - Pré-requisitos: prerequisites.md
+  - Exercícios:
+      - Introdução: exercises/index.md
+      - Colaborar:
+          - exercises/01.collaborate/index.md
+          - Gerenciamento de Projetos: exercises/01.collaborate/01.md
+          - Implementar Recursos: exercises/01.collaborate/02.md
+      - Proteger a Cadeia de Suprimentos de Software:
+          - exercises/02.secure.the.software.supply.chain/index.md
+          - Revisão de Dependências: exercises/02.secure.the.software.supply.chain/01.md
+          - Versionamento: exercises/02.secure.the.software.supply.chain/02.md
+      - Automatizar Lançamento:
+          - exercises/03.automate.release/index.md
+          - Versão de Lançamento: exercises/03.automate.release/01.md
+          - Implantação Contínua: exercises/03.automate.release/02.md
+      - ✨ Recapitulação:
+          - exercises/recap/index.md
+  - Tetris Game: tetris.game/index.html
